@@ -165,9 +165,9 @@ select
     collected_traffic_source.manual_medium AS manual_medium,
     collected_traffic_source.manual_term AS manual_term,
     collected_traffic_source.manual_content AS manual_content,
-    collected_traffic_source.manual_gclid AS manual_gclid,
-    collected_traffic_source.manual_dclid AS manual_dclid,
-    collected_traffic_source.manual_srsltid AS manual_srsltid,
+    collected_traffic_source.gclid AS manual_gclid,
+    collected_traffic_source.dclid AS manual_dclid,
+    collected_traffic_source.srsltid AS manual_srsltid,
 
 
     /* --- Ecommerce (Optional) Keep or Remove entire section --- */

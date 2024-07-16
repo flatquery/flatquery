@@ -161,13 +161,13 @@ select
     -- Manual Source - Typically UTM & autotagged values - will often match 'session_source' fields
     collected_traffic_source.manual_campaign_id AS manual_campaign_id,
     collected_traffic_source.manual_campaign_name AS manual_campaign_name,
-    collected_traffic_source.manual_source AS manual_source
-    collected_traffic_source.manual_medium AS manual_medium
-    collected_traffic_source.manual_term AS manual_term
-    collected_traffic_source.manual_content AS manual_content
-    collected_traffic_source.manual_gclid AS manual_gclid
-    collected_traffic_source.manual_dclid AS manual_dclid
-    collected_traffic_source.manual_srsltid AS manual_srsltid
+    collected_traffic_source.manual_source AS manual_source,
+    collected_traffic_source.manual_medium AS manual_medium,
+    collected_traffic_source.manual_term AS manual_term,
+    collected_traffic_source.manual_content AS manual_content,
+    collected_traffic_source.manual_gclid AS manual_gclid,
+    collected_traffic_source.manual_dclid AS manual_dclid,
+    collected_traffic_source.manual_srsltid AS manual_srsltid,
 
 
     /* --- Ecommerce (Optional) Keep or Remove entire section --- */
@@ -257,7 +257,7 @@ select
 
 from
     -- Google Analytics 4 export location in bigquery
-    `projectame.datasetName.events_*` -- Example: 'flatquery.analytics_388448675.events_*'
+    `<projectame>.<datasetName>.events_*` -- Example: 'flatquery.analytics_388448675.events_*'
 
      ) t1
 

@@ -247,9 +247,11 @@ select
 
     /* -- Custom Event Parameters -- */
     (select value.string_value from unnest(event_params) where key = '<insert key>') as event_string_value,
+    (select value.int_value from unnest(event_params) where key = '<insert key>') as event_integer_value,
 
     /* -- Custom User Properties -- */
     (select value.string_value from unnest(user_properties) where key = '<insert key>') as user_string_value,
+    (select value.int_value from unnest(user_properties) where key = '<insert key>') as user_integer_value,
 
      /* -- Custom Item Properties -- */
     (select value.string_value from unnest(items[SAFE_OFFSET(0)].item_params) where key = '<insert key>') as item_string_value,

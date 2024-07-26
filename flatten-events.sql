@@ -253,7 +253,7 @@ select
     (select value.string_value from unnest(user_properties) where key = '<insert key>') as user_string_value,
     (select value.int_value from unnest(user_properties) where key = '<insert key>') as user_integer_value,
 
-     /* -- Custom Item Properties -- */
+     /* -- Custom Item Parameters -- */
     (select value.string_value from unnest(items[SAFE_OFFSET(0)].item_params) where key = '<insert key>') as item_string_value,
     (select value.int_value from unnest(items[SAFE_OFFSET(0)].item_params) where key = '<insert key>') as item_integer_value,
 

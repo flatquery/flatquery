@@ -220,7 +220,7 @@ select
 
     --Integer values
     (select value.int_value from unnest(event_params) where key = 'ga_session_id') as ga_session_id,
-    (select value.int_value from unnest(event_params) where key = 'ga_session_id') as ga_session_number,
+    (select value.int_value from unnest(event_params) where key = 'ga_session_number') as ga_session_number,
     (select value.int_value from unnest(event_params) where key = 'entrances') as entrances,
     (select value.int_value from unnest(event_params) where key = 'batch_page_id') as batch_page_id,
     (select value.int_value from unnest(event_params) where key = 'batch_ordering_id') as batch_ordering_id,
@@ -243,7 +243,7 @@ select
     (select value.string_value from unnest(event_params) where key = 'ads_storage') as ads_storage,
     (select value.string_value from unnest(event_params) where key = 'ad_user_data') as ad_user_data,
 
-    /* -- Custom Parameters & Properties - add your own here -- */
+    /* -- Custom Parameters & Properties - add your own here or remove these -- */
 
     /* -- Custom Event Parameters -- */
     (select value.string_value from unnest(event_params) where key = '<insert key>') as event_string_value,
